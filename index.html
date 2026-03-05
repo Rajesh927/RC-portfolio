@@ -1,0 +1,660 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Rajesh Choudhari — B.Tech CSE (AI & ML) Undergraduate, Emerging Data Scientist. Portfolio showcasing projects in Python, Machine Learning, Quantum Computing & AI for Social Good.">
+    <meta name="keywords"
+        content="Rajesh Choudhari, AI, ML, Data Science, Python, Machine Learning, Portfolio, B.Tech CSE">
+    <meta name="author" content="Rajesh Choudhari">
+    <title>Rajesh Choudhari | AI & ML Portfolio</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Poppins:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Main Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ============================================
+         PARTICLE CANVAS (Animated Space Background)
+    ============================================ -->
+    <canvas id="space-canvas"></canvas>
+
+    <!-- ============================================
+         NAVIGATION BAR
+    ============================================ -->
+    <nav id="navbar" class="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">
+                <span class="logo-bracket">&lt;</span>RC<span class="logo-dot">.ai</span><span
+                    class="logo-bracket">/&gt;</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#hero" class="nav-link active">Home</a></li>
+                <li><a href="#intro-video" class="nav-link">Intro</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#education" class="nav-link">Education</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#certifications" class="nav-link">Certifications</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="#feedback" class="nav-link">Feedback</a></li>
+            </ul>
+            <button class="nav-toggle" id="navToggle" aria-label="Toggle navigation menu">
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+                <span class="hamburger-line"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ============================================
+         HERO SECTION
+    ============================================ -->
+    <section id="hero" class="hero-section">
+        <div class="hero-container">
+            <!-- Left Content -->
+            <div class="hero-content" id="heroContent">
+                <div class="hero-badge">
+                    <span class="badge-dot"></span>
+                    <span>Available for Internships & GSoC 2026</span>
+                </div>
+                <h1 class="hero-name">
+                    <span class="greeting">Hello, I'm</span>
+                    <span class="name-text">Rajesh<br>Choudhari</span>
+                </h1>
+                <h2 class="hero-title">B.Tech CSE (AI & ML) Undergraduate</h2>
+                <h3 class="hero-subtitle">Emerging Data Scientist</h3>
+                <div class="hero-tagline">
+                    <span class="tagline-prefix">&gt;&gt;&gt; </span>
+                    <span class="typewriter" id="typewriter"></span>
+                    <span class="cursor">|</span>
+                </div>
+                <div class="hero-buttons">
+                    <a href="#projects" class="btn btn-primary" id="btnViewProjects">
+                        <i class="fas fa-rocket"></i>
+                        <span>View Projects</span>
+                    </a>
+                    <a href="https://drive.google.com/drive/folders/1SkNZDJAsWbnTkV3pCCwrmlD1nNriG2_S?usp=sharing"
+                        target="_blank" rel="noopener noreferrer" class="btn btn-secondary" id="btnDownloadResume">
+                        <i class="fas fa-file-alt"></i>
+                        <span>View Resume</span>
+                    </a>
+                </div>
+                <!-- Social Links -->
+                <div class="hero-socials">
+                    <a href="https://www.linkedin.com/in/rajesh-c-7272a3334" target="_blank" rel="noopener noreferrer"
+                        class="social-icon" aria-label="LinkedIn">
+                        <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a href="https://github.com/Rajesh927" target="_blank" rel="noopener noreferrer" class="social-icon"
+                        aria-label="GitHub">
+                        <i class="fab fa-github"></i>
+                    </a>
+                    <a href="mailto:rcrajesh927@gmail.com" class="social-icon" aria-label="Email">
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Right: Profile Image -->
+            <div class="hero-image" id="heroImage">
+                <div class="profile-ring">
+                    <div class="profile-img-wrapper">
+                        <img src="assets/profile.jpg" alt="Rajesh Choudhari profile photo" class="profile-img"
+                            loading="eager">
+                    </div>
+                    <!-- Orbiting AI Icons -->
+                    <div class="orbit-track orbit-track-1">
+                        <div class="orbit-item orbit-item-1">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                    </div>
+                    <div class="orbit-track orbit-track-2">
+                        <div class="orbit-item orbit-item-2">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                    </div>
+                    <div class="orbit-track orbit-track-3">
+                        <div class="orbit-item orbit-item-3">
+                            <i class="fas fa-satellite"></i>
+                        </div>
+                    </div>
+                    <!-- Subtle border glow -->
+                    <div class="profile-border-glow"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll indicator -->
+        <div class="scroll-indicator" id="scrollIndicator">
+            <span>Scroll Down</span>
+            <div class="scroll-arrow">
+                <i class="fas fa-chevron-down"></i>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         INTRO VIDEO SECTION
+    ============================================ -->
+    <section id="intro-video" class="section intro-video-section">
+        <div class="section-container">
+            <div class="section-header reveal">
+                <span class="section-tag">&lt;intro /&gt;</span>
+                <h2 class="section-title">Watch My Introduction</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="video-wrapper reveal">
+                <div class="video-card glass-card">
+                    <div class="video-container" id="videoContainer">
+                        <video id="introVideo" preload="metadata" poster="">
+                            <source src="assets/intro.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                        <div class="video-overlay" id="videoOverlay">
+                            <button class="play-btn" id="playBtn" aria-label="Play introduction video">
+                                <div class="play-btn-ring"></div>
+                                <i class="fas fa-play"></i>
+                            </button>
+                            <span class="play-text">Play Introduction</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         ABOUT ME SECTION
+    ============================================ -->
+    <section id="about" class="section about-section">
+        <div class="section-container">
+            <div class="section-header reveal">
+                <span class="section-tag">&lt;about /&gt;</span>
+                <h2 class="section-title">About Me</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="about-content">
+                <!-- Left: Image -->
+                <div class="about-image reveal">
+                    <div class="about-img-card glass-card">
+                        <img src="assets/about.png" alt="Rajesh Choudhari professional photo" loading="lazy">
+                        <div class="about-img-glow"></div>
+                    </div>
+                </div>
+                <!-- Right: Text -->
+                <div class="about-text reveal">
+                    <div class="about-text-card glass-card">
+                        <h3 class="about-greeting">Who am I?</h3>
+                        <p class="about-description">
+                            I am a <span class="highlight">B.Tech CSE (AI & ML)</span> student at
+                            <span class="highlight">SRM Institute of Science and Technology</span>, passionate about
+                            building intelligent systems that solve real-world problems.
+                        </p>
+                        <p class="about-description">
+                            Currently focused on <span class="highlight">Python</span>,
+                            <span class="highlight">Data Science</span>, and
+                            <span class="highlight">Machine Learning</span>. I aim to contribute to impactful
+                            innovations in <span class="highlight">Artificial Intelligence</span> and
+                            <span class="highlight">Quantum Computing</span> for social good.
+                        </p>
+                        <div class="about-stats">
+                            <div class="stat-item">
+                                <span class="stat-number" data-target="5">0</span><span class="stat-plus">+</span>
+                                <span class="stat-label">Skills Mastering</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number" data-target="2">0</span><span class="stat-plus">+</span>
+                                <span class="stat-label">Certifications</span>
+                            </div>
+                            <div class="stat-item">
+                                <span class="stat-number" data-target="1">0</span><span class="stat-plus">st</span>
+                                <span class="stat-label">Year Student</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         EDUCATION SECTION
+    ============================================ -->
+    <section id="education" class="section education-section">
+        <div class="section-container">
+            <div class="section-header reveal">
+                <span class="section-tag">&lt;education /&gt;</span>
+                <h2 class="section-title">Education</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="education-timeline reveal">
+                <div class="timeline-line"></div>
+
+                <!-- B.Tech -->
+                <div class="timeline-item">
+                    <div class="timeline-dot">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="timeline-card glass-card">
+                        <div class="timeline-card-header">
+                            <div class="edu-icon">
+                                <i class="fas fa-university"></i>
+                            </div>
+                            <div>
+                                <h3 class="edu-institution">SRM Institute of Science and Technology</h3>
+                                <span class="edu-abbreviation">(SRMIST)</span>
+                            </div>
+                        </div>
+                        <h4 class="edu-degree">B.Tech in Computer Science & Engineering</h4>
+                        <p class="edu-specialization">
+                            <i class="fas fa-brain"></i>
+                            Specialization: Artificial Intelligence & Machine Learning
+                        </p>
+                        <div class="edu-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Chennai, India</span>
+                        </div>
+                        <div class="edu-duration">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>June 2025 – May 2029</span>
+                        </div>
+                        <div class="edu-status">
+                            <span class="status-badge">Currently Pursuing</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Class 12 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot">
+                        <i class="fas fa-book-open"></i>
+                    </div>
+                    <div class="timeline-card glass-card">
+                        <div class="timeline-card-header">
+                            <div class="edu-icon edu-icon-cyan">
+                                <i class="fas fa-school"></i>
+                            </div>
+                            <div>
+                                <h3 class="edu-institution">J.K. College of Science, Commerce and Arts</h3>
+                            </div>
+                        </div>
+                        <h4 class="edu-degree">Higher Secondary Education (Class 12 – PCM)</h4>
+                        <div class="edu-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Pune, Maharashtra, India</span>
+                        </div>
+                        <div class="edu-duration">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>Completed in 2025</span>
+                        </div>
+                        <div class="edu-status">
+                            <span class="status-badge completed-badge">Completed</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Class 10 -->
+                <div class="timeline-item">
+                    <div class="timeline-dot">
+                        <i class="fas fa-book"></i>
+                    </div>
+                    <div class="timeline-card glass-card">
+                        <div class="timeline-card-header">
+                            <div class="edu-icon edu-icon-purple">
+                                <i class="fas fa-school"></i>
+                            </div>
+                            <div>
+                                <h3 class="edu-institution">Immanuel Mar Thoma School</h3>
+                            </div>
+                        </div>
+                        <h4 class="edu-degree">Secondary School (Class 10)</h4>
+                        <div class="edu-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>Pune, Maharashtra, India</span>
+                        </div>
+                        <div class="edu-duration">
+                            <i class="fas fa-calendar-alt"></i>
+                            <span>Completed in 2023</span>
+                        </div>
+                        <div class="edu-status">
+                            <span class="status-badge completed-badge">Completed</span>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         SKILLS SECTION
+    ============================================ -->
+    <section id="skills" class="section skills-section">
+        <div class="section-container">
+            <div class="section-header reveal">
+                <span class="section-tag">&lt;skills /&gt;</span>
+                <h2 class="section-title">My Skills</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="skills-grid reveal">
+                <!-- Skill Card: Python -->
+                <div class="skill-card glass-card" data-skill="python">
+                    <div class="skill-icon-wrapper">
+                        <i class="fab fa-python"></i>
+                    </div>
+                    <h3 class="skill-name">Python</h3>
+                    <div class="skill-bar">
+                        <div class="skill-bar-fill" data-width="80"></div>
+                    </div>
+                    <span class="skill-level">Advanced</span>
+                </div>
+
+                <!-- Skill Card: C Programming -->
+                <div class="skill-card glass-card" data-skill="c">
+                    <div class="skill-icon-wrapper">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3 class="skill-name">C Programming</h3>
+                    <div class="skill-bar">
+                        <div class="skill-bar-fill" data-width="65"></div>
+                    </div>
+                    <span class="skill-level">Intermediate</span>
+                </div>
+
+                <!-- Skill Card: Machine Learning -->
+                <div class="skill-card glass-card" data-skill="ml">
+                    <div class="skill-icon-wrapper">
+                        <i class="fas fa-robot"></i>
+                    </div>
+                    <h3 class="skill-name">Machine Learning</h3>
+                    <div class="skill-bar">
+                        <div class="skill-bar-fill" data-width="60"></div>
+                    </div>
+                    <span class="skill-level">Intermediate</span>
+                </div>
+
+                <!-- Skill Card: Data Science -->
+                <div class="skill-card glass-card" data-skill="ds">
+                    <div class="skill-icon-wrapper">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3 class="skill-name">Data Science</h3>
+                    <div class="skill-bar">
+                        <div class="skill-bar-fill" data-width="55"></div>
+                    </div>
+                    <span class="skill-level">Intermediate</span>
+                </div>
+
+                <!-- Skill Card: Engineering Fundamentals -->
+                <div class="skill-card glass-card" data-skill="engineering">
+                    <div class="skill-icon-wrapper">
+                        <i class="fas fa-cogs"></i>
+                    </div>
+                    <h3 class="skill-name">Engineering Fundamentals</h3>
+                    <div class="skill-bar">
+                        <div class="skill-bar-fill" data-width="70"></div>
+                    </div>
+                    <span class="skill-level">Advanced</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         PROJECTS SECTION
+    ============================================ -->
+    <section id="projects" class="section projects-section">
+        <div class="section-container">
+            <div class="section-header reveal">
+                <span class="section-tag">&lt;projects /&gt;</span>
+                <h2 class="section-title">My Projects</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="projects-grid reveal">
+                <!-- Project 1: Tic Tac Toe -->
+                <a href="https://github.com/Rajesh927/TIC-TAC-TOE" target="_blank" rel="noopener noreferrer"
+                    class="project-card glass-card">
+                    <div class="project-card-header">
+                        <div class="project-icon">
+                            <i class="fas fa-gamepad"></i>
+                        </div>
+                        <div class="project-links">
+                            <span class="project-link-icon"><i class="fab fa-github"></i></span>
+                            <span class="project-link-icon"><i class="fas fa-external-link-alt"></i></span>
+                        </div>
+                    </div>
+                    <h3 class="project-name">Tic Tac Toe</h3>
+                    <p class="project-description">A classic Tic Tac Toe game built with clean logic and interactive
+                        gameplay. Features player vs player mode with a sleek UI.</p>
+                    <div class="project-tags">
+                        <span class="project-tag">Python</span>
+                        <span class="project-tag">Game</span>
+                        <span class="project-tag">Logic</span>
+                    </div>
+                </a>
+
+                <!-- Coming Soon Card -->
+                <div class="project-card glass-card coming-soon-card">
+                    <div class="project-card-header">
+                        <div class="project-icon coming-soon-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                    </div>
+                    <h3 class="project-name">Coming Soon</h3>
+                    <p class="project-description">More exciting projects in AI, Machine Learning, and Data Science are
+                        on the way. Stay tuned!</p>
+                    <div class="project-tags">
+                        <span class="project-tag soon-tag">AI / ML</span>
+                        <span class="project-tag soon-tag">Data Science</span>
+                        <span class="project-tag soon-tag">Quantum</span>
+                    </div>
+                    <div class="coming-soon-pulse"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         CERTIFICATIONS SECTION
+    ============================================ -->
+    <section id="certifications" class="section certifications-section">
+        <div class="section-container">
+            <div class="section-header reveal">
+                <span class="section-tag">&lt;certifications /&gt;</span>
+                <h2 class="section-title">Certifications</h2>
+                <div class="section-line"></div>
+            </div>
+            <div class="cert-grid reveal">
+                <!-- Cert 1: Vibe Coding Course -->
+                <div class="cert-card glass-card">
+                    <div class="cert-badge">
+                        <div class="cert-badge-inner">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <div class="cert-badge-glow"></div>
+                    </div>
+                    <h3 class="cert-name">Vibe Coding Course</h3>
+                    <p class="cert-issuer">Professional Certification</p>
+                    <div class="cert-status">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Verified</span>
+                    </div>
+                    <a href="https://drive.google.com/file/d/1vYBjDUPfTDi7akBYu4ro3XrQSp1II-0w/view?usp=sharing"
+                        target="_blank" rel="noopener noreferrer" class="cert-link">
+                        <i class="fas fa-external-link-alt"></i> View Certificate
+                    </a>
+                </div>
+
+                <!-- Cert 2: Generative AI -->
+                <div class="cert-card glass-card">
+                    <div class="cert-badge">
+                        <div class="cert-badge-inner">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <div class="cert-badge-glow"></div>
+                    </div>
+                    <h3 class="cert-name">Generative AI for Beginners</h3>
+                    <p class="cert-issuer">Certified Professional</p>
+                    <div class="cert-status">
+                        <i class="fas fa-check-circle"></i>
+                        <span>Verified</span>
+                    </div>
+                    <a href="https://drive.google.com/file/d/1NoW6Nm7Rb4pokaOuGsS6jdRCWNjJXxG9/view?usp=sharing"
+                        target="_blank" rel="noopener noreferrer" class="cert-link">
+                        <i class="fas fa-external-link-alt"></i> View Certificate
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         CONTACT SECTION
+    ============================================ -->
+    <section id="contact" class="section contact-section">
+        <div class="section-container">
+            <div class="section-header reveal">
+                <span class="section-tag">&lt;contact /&gt;</span>
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="section-line"></div>
+                <p class="section-subtitle">Have a project idea or want to collaborate? Let's connect!</p>
+            </div>
+            <div class="contact-grid reveal">
+                <!-- Email Card -->
+                <a href="mailto:rcrajesh927@gmail.com" class="contact-card glass-card" id="contactEmail">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3 class="contact-label">Email</h3>
+                    <p class="contact-value">rcrajesh927@gmail.com</p>
+                </a>
+
+                <!-- LinkedIn Card -->
+                <a href="https://www.linkedin.com/in/rajesh-c-7272a3334" target="_blank" rel="noopener noreferrer"
+                    class="contact-card glass-card" id="contactLinkedin">
+                    <div class="contact-icon linkedin-icon">
+                        <i class="fab fa-linkedin-in"></i>
+                    </div>
+                    <h3 class="contact-label">LinkedIn</h3>
+                    <p class="contact-value">Connect with me</p>
+                </a>
+
+                <!-- GitHub Card -->
+                <a href="https://github.com/Rajesh927" target="_blank" rel="noopener noreferrer"
+                    class="contact-card glass-card" id="contactGithub">
+                    <div class="contact-icon github-icon">
+                        <i class="fab fa-github"></i>
+                    </div>
+                    <h3 class="contact-label">GitHub</h3>
+                    <p class="contact-value">View my code</p>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         VISITOR FEEDBACK SECTION
+    ============================================ -->
+    <section id="feedback" class="section feedback-section">
+        <div class="section-container">
+            <div class="section-header reveal">
+                <span class="section-tag">&lt;feedback /&gt;</span>
+                <h2 class="section-title">Visitor Feedback</h2>
+                <div class="section-line"></div>
+                <p class="section-subtitle">I'd love to hear your thoughts! Leave a message below.</p>
+            </div>
+            <div class="feedback-wrapper reveal">
+                <div class="feedback-card glass-card">
+                    <form id="feedbackForm" action="https://formspree.io/f/xbdzroob" method="POST">
+                        <div class="form-group">
+                            <label for="feedbackName" class="form-label">
+                                <i class="fas fa-user"></i> Your Name
+                            </label>
+                            <input type="text" id="feedbackName" name="name" class="form-input"
+                                placeholder="Enter your name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="feedbackEmail" class="form-label">
+                                <i class="fas fa-envelope"></i> Your Email
+                            </label>
+                            <input type="email" id="feedbackEmail" name="email" class="form-input"
+                                placeholder="Enter your email" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label">
+                                <i class="fas fa-star"></i> Rating
+                            </label>
+                            <div class="star-rating" id="starRating">
+                                <input type="hidden" name="rating" id="ratingValue" value="0">
+                                <button type="button" class="star-btn" data-value="1" aria-label="1 star"><i
+                                        class="fas fa-star"></i></button>
+                                <button type="button" class="star-btn" data-value="2" aria-label="2 stars"><i
+                                        class="fas fa-star"></i></button>
+                                <button type="button" class="star-btn" data-value="3" aria-label="3 stars"><i
+                                        class="fas fa-star"></i></button>
+                                <button type="button" class="star-btn" data-value="4" aria-label="4 stars"><i
+                                        class="fas fa-star"></i></button>
+                                <button type="button" class="star-btn" data-value="5" aria-label="5 stars"><i
+                                        class="fas fa-star"></i></button>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="feedbackMessage" class="form-label">
+                                <i class="fas fa-comment-dots"></i> Your Message
+                            </label>
+                            <textarea id="feedbackMessage" name="message" class="form-input form-textarea"
+                                placeholder="Share your feedback, suggestions, or just say hi!" rows="5"
+                                required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary feedback-submit" id="feedbackSubmit">
+                            <i class="fas fa-paper-plane"></i>
+                            <span>Send Feedback</span>
+                        </button>
+                    </form>
+                    <!-- Success message -->
+                    <div class="feedback-success" id="feedbackSuccess">
+                        <div class="success-icon">
+                            <i class="fas fa-check-circle"></i>
+                        </div>
+                        <h3>Thank You!</h3>
+                        <p>Your feedback has been sent successfully.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================
+         FOOTER
+    ============================================ -->
+    <footer id="footer" class="footer">
+        <div class="footer-line"></div>
+        <div class="footer-container">
+            <p class="footer-text">
+                <span class="footer-code">&lt;/&gt;</span>
+                Designed & Built by <span class="footer-name">Rajesh Choudhari</span>
+            </p>
+            <p class="footer-tagline">Human creativity × AI assistance</p>
+            <p class="footer-year">&copy; 2026 — All Rights Reserved</p>
+        </div>
+    </footer>
+
+    <!-- Main JavaScript -->
+    <script src="script.js"></script>
+</body>
+
+</html>
