@@ -150,32 +150,33 @@
     <!-- ============================================
          INTRO VIDEO SECTION
     ============================================ -->
-    <section id="intro-video" class="section intro-video-section">
-        <div class="section-container">
-            <div class="section-header reveal">
-                <span class="section-tag">&lt;intro /&gt;</span>
-                <h2 class="section-title">Watch My Introduction</h2>
-                <div class="section-line"></div>
-            </div>
-            <div class="video-wrapper reveal">
-                <div class="video-card glass-card">
-                    <div class="video-container" id="videoContainer">
-                        <video id="introVideo" preload="metadata" poster="">
-                            <source src="intro.mp4" type="video/mp4">
-                            Your browser does not support the video tag.
-                        </video>
-                        <div class="video-overlay" id="videoOverlay">
-                            <button class="play-btn" id="playBtn" aria-label="Play introduction video">
-                                <div class="play-btn-ring"></div>
-                                <i class="fas fa-play"></i>
-                            </button>
-                            <span class="play-text">Play Introduction</span>
-                        </div>
-                    </div>
-                </div>
+  ```
+    <div class="section-header reveal">
+        <span class="section-tag">&lt;intro /&gt;</span>
+        <h2 class="section-title">Watch My Introduction</h2>
+        <div class="section-line"></div>
+    </div>
+
+    <div class="video-wrapper reveal">
+        <div class="video-card glass-card">
+            <div class="video-container">
+
+                <iframe 
+                    width="100%" 
+                    height="420"
+                    src="https://www.youtube.com/embed/MydRCulPZeY?rel=0&modestbranding=1"
+                    title="Rajesh Choudhari Introduction Video"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen>
+                </iframe>
+
             </div>
         </div>
-    </section>
+    </div>
+</div>
+```
+
 
     <!-- ============================================
          ABOUT ME SECTION
@@ -659,5 +660,6 @@
 
 
 </html>
+
 
 
